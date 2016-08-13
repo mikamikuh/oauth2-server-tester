@@ -16,7 +16,7 @@ func main() {
 
 	http.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) {
 		p := &LoginPage{URL: "https://www.facebook.com/dialog/oauth"}
-		t, err := template.ParseFiles("html/login.html")
+		t, err := template.ParseFiles("login.html")
 
 		if err != nil {
 			log.Print(err)
