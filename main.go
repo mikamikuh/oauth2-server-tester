@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 )
 
 type LoginPage struct {
@@ -11,6 +12,8 @@ type LoginPage struct {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+
 	http.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) {
 		p := &LoginPage{URL: "https://www.facebook.com/dialog/oauth"}
 		t, err := template.ParseFiles("html/login.html")
@@ -24,5 +27,5 @@ func main() {
 	})
 
 	log.Print("Client started...")
-	http.ListenAndServe(":14001", nil)
+	http.ListenAndServe(":"+port, nil)
 }
