@@ -1,0 +1,12 @@
+{
+  "name": "OAuth2 Server Tester",
+  "description": "OAuth2 server test app which is easy to deploy on heroku",
+  "keywords": [
+    "go",
+    "oauth"
+  ],
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/mikamikuh/oauth2-server-tester",
+  "website": "http://github.com/mikamikuh/oauth2-server-tester",
+  "repository": "http://github.com/mikamikuh/oauth2-server-tester"
+}
